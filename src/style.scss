@@ -10,7 +10,26 @@ $color-reset: #e42e4a;
 $font-family-default: 'Roboto', sans-serif;
 $font-size-default: 32px;
 
-
 body {
-  background: peachpuff;
+  font: 400 $font-size-default $font-family-default;    
+  color: $color-default;
+  
+  .calculator {  
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    .display {
+      background: $color-display;
+      text-align: right;
+      padding: 50px 30px;
+      #calculation {
+        color: $color-secondary;
+      }
+      #answer {
+        font-size:$font-size-default * 2;
+      }
+    }    
+  }
 }
