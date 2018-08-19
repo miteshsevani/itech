@@ -7,13 +7,13 @@ $color-operator: #f3ac74;
 $color-reset: #e42e4a;
 
 // Fonts
-$font-family-default: 'Roboto', sans-serif;
+$font-family-default: 'Roboto', sans-serif;;
 $font-size-default: 32px;
 
 body {
   font: 400 $font-size-default $font-family-default;    
   color: $color-default;
-  
+  letter-spacing: 0.2em;
   .calculator {  
     margin: 0 auto;
     display: flex;
@@ -30,6 +30,30 @@ body {
       #answer {
         font-size:$font-size-default * 2;
       }
-    }    
+    }
+    .keypad {
+      .row {
+        display: flex;
+        border-bottom: 1px solid $color-secondary;
+        .button,
+        .operator,
+        .reset {
+          padding: 20px;
+          display: flex;          
+          justify-content: center;
+          flex: 1 1;
+          cursor: pointer;          
+        }
+        .button {
+          background: $color-numbers;          
+        }
+        .operator {
+          background: $color-operator;          
+        }
+        .reset {
+          background: $color-reset;        
+        }        
+      }
+    }
   }
 }
