@@ -1,0 +1,40 @@
+body {
+  font: 100 28px "Roboto", sans-serif;
+  color: #fff; }
+  body .calculator {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 280px; }
+    body .calculator .display {
+      background: #1f282d;
+      text-align: right;
+      padding: 35px 30px;
+      font-weight: 400;
+      letter-spacing: 0.2em; }
+      body .calculator .display #calculation {
+        color: #666e72; }
+      body .calculator .display #answer {
+        font-size: 56px; }
+    body .calculator .keypad {
+      display: flex;
+      flex-wrap: wrap; }
+      body .calculator .keypad .button,
+      body .calculator .keypad .operator,
+      body .calculator .keypad .reset {
+        padding: 16px 25px;
+        display: flex;
+        justify-content: center;
+        flex: 1;
+        border-bottom: 1px solid #8c9498;
+        cursor: pointer; }
+      body .calculator .keypad .button {
+        background: #f3827e; }
+      body .calculator .keypad .operator {
+        background: #f3ac74; }
+      body .calculator .keypad .reset,
+      body .calculator .keypad .save {
+        background: #e42e4a; }
+      body .calculator .keypad .save {
+        flex: 55px; }
