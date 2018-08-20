@@ -2,16 +2,16 @@
 $color-default: #fff;
 $color-secondary: #666e72;
 $color-display: #1f282d;
-$color-numbers: #f16b67;
+$color-numbers: #f3827e;
 $color-operator: #f3ac74;
 $color-reset: #e42e4a;
 
 // Fonts
 $font-family-default: 'Roboto', sans-serif;;
-$font-size-default: 34px;
+$font-size-default: 28px;
 
 body {
-  font: 300 $font-size-default $font-family-default;    
+  font: 100 $font-size-default $font-family-default;    
   color: $color-default;  
   .calculator {  
     margin: 0 auto;
@@ -22,7 +22,7 @@ body {
     .display {
       background: $color-display;
       text-align: right;
-      padding: 50px 30px;
+      padding: 35px 30px;
       font-weight: 400;
       letter-spacing: 0.2em;      
       #calculation {
@@ -35,15 +35,15 @@ body {
     .keypad {      
         display: flex;
         flex-wrap: wrap;
-        border-bottom: 1px solid $color-secondary;
         .button,
         .operator,
         .reset {          
-          padding: 22px;
+          padding: 16px 25px;
           display: flex;          
           justify-content: center;
           flex: 1;
-          cursor: pointer;          
+          border-bottom: 1px solid lighten($color-secondary,15%);
+          cursor: pointer;
         }
         .button {
           background: $color-numbers;          
@@ -55,8 +55,8 @@ body {
         .save {
           background: $color-reset;        
         }
-        .save {
-          width: 78px;
+        .save {          
+          flex: 55px;
         }              
     }
   }
