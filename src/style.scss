@@ -19,7 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 400px;
+    width: 270px;
     .display {
       background: $color-display;
       text-align: right;
@@ -31,14 +31,15 @@ body {
         font-size:$font-size-default * 2;
       }
     }
-    .keypad {
-      .row {
+    .keypad {      
         display: flex;
+        flex-wrap: wrap;
         border-bottom: 1px solid $color-secondary;
         .button,
         .operator,
         .reset {
-          padding: 20px;
+          width: 50px;
+          padding: 18px;
           display: flex;          
           justify-content: center;
           flex: 1 1;
@@ -50,10 +51,14 @@ body {
         .operator {
           background: $color-operator;          
         }
-        .reset {
+        .reset,
+        .save {
           background: $color-reset;        
+        }
+        .save {
+          width: 80px;
         }        
-      }
+      
     }
   }
 }
