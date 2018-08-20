@@ -14,4 +14,7 @@ fputcsv($write_file,explode(',',$entry));
 
 fclose($write_file);
 
+header("Location: index.html");
+die();
+
 ?>

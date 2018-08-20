@@ -15,4 +15,8 @@ while (($entry = fgetcsv($read_file)) !== FALSE) {
 }
 echo "</table>";
 
-fclose($read_file); ?>
+fclose($read_file);
+
+echo "<p><a href='index.html'>Go to calculator</a></p>"
+
+?>
