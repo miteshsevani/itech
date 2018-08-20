@@ -9,7 +9,7 @@ $(document).ready(function(){
     } else if (!isNaN(buttonPressed) || buttonPressed === '.') {
       calcValue += $(this).text();
       calculation(calcValue);
-    } else if (buttonPressed === '÷' || buttonPressed === 'X' || buttonPressed === '+' || buttonPressed === '-') {
+    } else if (buttonPressed === '÷' || buttonPressed === 'x' || buttonPressed === '+' || buttonPressed === '-') {
       calcValue += $(this).text();
       calculation(calcValue);      
       operator = buttonPressed;      

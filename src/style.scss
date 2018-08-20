@@ -8,22 +8,23 @@ $color-reset: #e42e4a;
 
 // Fonts
 $font-family-default: 'Roboto', sans-serif;;
-$font-size-default: 32px;
+$font-size-default: 34px;
 
 body {
-  font: 400 $font-size-default $font-family-default;    
-  color: $color-default;
-  letter-spacing: 0.2em;
+  font: 300 $font-size-default $font-family-default;    
+  color: $color-default;  
   .calculator {  
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 270px;
+    width: 280px;
     .display {
       background: $color-display;
       text-align: right;
       padding: 50px 30px;
+      font-weight: 400;
+      letter-spacing: 0.2em;      
       #calculation {
         color: $color-secondary;
       }
@@ -37,12 +38,11 @@ body {
         border-bottom: 1px solid $color-secondary;
         .button,
         .operator,
-        .reset {
-          width: 50px;
-          padding: 18px;
+        .reset {          
+          padding: 22px;
           display: flex;          
           justify-content: center;
-          flex: 1 1;
+          flex: 1;
           cursor: pointer;          
         }
         .button {
@@ -56,9 +56,8 @@ body {
           background: $color-reset;        
         }
         .save {
-          width: 80px;
-        }        
-      
+          width: 78px;
+        }              
     }
   }
 }
