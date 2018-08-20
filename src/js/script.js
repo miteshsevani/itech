@@ -6,7 +6,7 @@ $(document).ready(function(){
     if(buttonPressed === 'AC') {
       reset();
       calcValue = '';
-    } else if (!isNaN(buttonPressed)) {
+    } else if (!isNaN(buttonPressed) || buttonPressed === '.') {
       calcValue += $(this).text();
       calculation(calcValue);
     } else if (buttonPressed === '÷' || buttonPressed === 'X' || buttonPressed === '+' || buttonPressed === '-') {
