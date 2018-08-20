@@ -8,7 +8,7 @@ $entry_date = date("jS F Y");
 $browser = $_POST['browser'];
 
 $entry = "$sum,10.1.1.2,$entry_date,$browser";
-$write_file = fopen("calculations.csv","w");
+$write_file = fopen("calculations.csv","a");
 
 fputcsv($write_file,explode(',',$entry));
 
