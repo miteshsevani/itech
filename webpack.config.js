@@ -11,7 +11,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.html$/,
+        test: /\.php$/,
         use: [
           {
             loader: "html-loader",
@@ -31,8 +31,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
+      template: "./src/index.php",
+      filename: "./index.php"
     }),
     new ExtractTextPlugin({
       filename: 'css/style.css'

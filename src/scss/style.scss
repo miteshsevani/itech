@@ -33,31 +33,36 @@ body {
       }
     }
     .keypad {      
-        display: flex;
-        flex-wrap: wrap;
-        .button,
-        .operator,
-        .reset {          
-          padding: 16px 25px;
-          display: flex;          
-          justify-content: center;
-          flex: 1;
-          border-bottom: 1px solid lighten($color-secondary,15%);
-          cursor: pointer;
+      display: flex;
+      flex-wrap: wrap;
+      .button,
+      .operator,
+      .reset {          
+        padding: 16px 25px;
+        display: flex;          
+        justify-content: center;
+        flex: 1;
+        border-bottom: 1px solid lighten($color-secondary,15%);
+        cursor: pointer;
+      }
+      .button {
+        background: $color-numbers;          
+      }
+      .operator {
+        background: $color-operator;          
+      }
+      .reset,
+      .save {
+        background: $color-reset;        
+      }
+      .save {        
+        input {
+          border: 0;
+          background: 0;
+          color: white;
+          font: 100 26px "Roboto", sans-serif;
         }
-        .button {
-          background: $color-numbers;          
-        }
-        .operator {
-          background: $color-operator;          
-        }
-        .reset,
-        .save {
-          background: $color-reset;        
-        }
-        .save {          
-          flex: 55px;
-        }              
+      }              
     }
   }
 }

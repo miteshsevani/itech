@@ -16,7 +16,12 @@
     </div>
     <div class="keypad">      
         <div id="reset" class="button reset">AC</div>
-        <div id="save" class="button save">SAVE</div>
+        <form action="save_calc.php" method="post">
+        <div class="button save">
+          <input type="text" id="post-answer" value="0" />
+          <input type="submit" id="save" value="SAVE" />
+        </div>
+        </form>
         <div id="divide" class="button operator">&#247;</div>      
         <div id="decimal" class="button">.</div>
         <div id="0" class="button">0</div>

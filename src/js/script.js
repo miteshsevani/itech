@@ -37,4 +37,5 @@ function getTotal(total) {
     total = (total.replace(/\÷/g, '/') );
   }
   $("#answer").text(eval(total));
+  $("#post-answer").val(eval(total));
 }
