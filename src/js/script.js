@@ -14,7 +14,7 @@ $(document).ready(function(){
       calculation(calcValue);      
       operator = buttonPressed;      
     } else if (buttonPressed === '=') {
-      
+      getTotal(calcValue);
       calcValue += $(this).text();
       calculation(calcValue);      
     }
@@ -28,4 +28,13 @@ function calculation(value) {
 function reset() {
   $("#calculation").text('0');  
   $("#answer").text('0');
+}
+
+function getTotal(total) {  
+  if(total.indexOf('X') != -1){
+    total = (total.replace(/\X/g, '*') );
+  } else if (total.indexOf('÷') != -1) {
+    total = (total.replace(/\÷/g, '/') );
+  }
+  $("#answer").text(eval(total));
 }
