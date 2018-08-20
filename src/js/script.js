@@ -31,8 +31,8 @@ function reset() {
 }
 
 function getTotal(total) {  
-  if(total.indexOf('X') != -1){
-    total = (total.replace(/\X/g, '*') );
+  if(total.indexOf('x') != -1){
+    total = (total.replace(/\x/g, '*') );
   } else if (total.indexOf('÷') != -1) {
     total = (total.replace(/\÷/g, '/') );
   }
