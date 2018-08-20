@@ -39,3 +39,27 @@ function getTotal(total) {
   $("#answer").text(eval(total));
   $("#post-answer").val(eval(total));
 }
+
+
+function getBrowser() {
+  let nAgt = navigator.userAgent;
+  let browserName  = navigator.appName;
+  let verOffset;
+  
+  if ((verOffset=nAgt.indexOf("Opera"))!=-1) {
+    browserName = "Opera";   
+  } else if ((verOffset=nAgt.indexOf("MSIE"))!=-1) {
+    browserName = "Microsoft Internet Explorer";   
+  } else if ((verOffset=nAgt.indexOf("Chrome"))!=-1) {
+    browserName = "Chrome";
+  } else if ((verOffset=nAgt.indexOf("Safari"))!=-1) {
+    browserName = "Safari";
+  } else if ((verOffset=nAgt.indexOf("Firefox"))!=-1) {
+    browserName = "Firefox";
+  } else {
+    browserName = "Unknown";
+  }
+  $("#browser").val(browserName);
+}
+
+getBrowser();
