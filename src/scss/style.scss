@@ -24,7 +24,8 @@ body {
       text-align: right;
       padding: 35px 30px;
       font-weight: 400;
-      letter-spacing: 0.2em;      
+      letter-spacing: 0.2em;
+      height: 100px;
       #calculation {
         color: $color-secondary;
       }
@@ -55,12 +56,14 @@ body {
       .save {
         background: $color-reset;        
       }
-      .save {        
+      .save {     
+           
         input {
           border: 0;
           background: 0;
           color: white;
           font: 100 26px "Roboto", sans-serif;
+          cursor: pointer;
         }
       }              
     }

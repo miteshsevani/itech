@@ -17,7 +17,7 @@ $(document).ready(function(){
       calculation(calcValue);      
       operator = buttonPressed;      
     // Equals was clicked, display the total in the display
-    } else if (buttonPressed === '=') {
+    } else if (buttonPressed === '=') {      
       getTotal(calcValue);
       calcValue += $(this).text();
       calculation(calcValue);      
@@ -39,9 +39,10 @@ function getTotal(total) {
     total = (total.replace(/\x/g, '*') );
   } else if (total.indexOf('÷') != -1) {
     total = (total.replace(/\÷/g, '/') );
-  }
-  $("#answer").text(eval(total));
+  }    
+  $("#answer").text(eval(total));  
   $("#post-answer").val(eval(total));
+  
 }
 
 // Get broswer function and add it to the html form input field
