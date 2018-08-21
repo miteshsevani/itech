@@ -20,7 +20,9 @@ $(document).ready(function(){
     } else if (buttonPressed === '=') {      
       getTotal(calcValue);
       calcValue += $(this).text();
-      calculation(calcValue);      
+      calculation(calcValue);
+      $("#calculation").text('');
+      calcValue = '';
     }
   });
 });
