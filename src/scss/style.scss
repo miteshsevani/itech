@@ -25,9 +25,10 @@ body {
       padding: 35px 30px;
       font-weight: 400;
       letter-spacing: 0.2em;
-      height: 100px;
+      height: 90px;
       #calculation {
         color: $color-secondary;
+        display: inline-block;
       }
       #answer {
         font-size:$font-size-default * 2;

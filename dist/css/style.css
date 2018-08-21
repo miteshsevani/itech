@@ -13,9 +13,10 @@ body {
       padding: 35px 30px;
       font-weight: 400;
       letter-spacing: 0.2em;
-      height: 100px; }
+      height: 90px; }
       body .calculator .display #calculation {
-        color: #666e72; }
+        color: #666e72;
+        display: inline-block; }
       body .calculator .display #answer {
         font-size: 56px; }
     body .calculator .keypad {
