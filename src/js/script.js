@@ -3,16 +3,20 @@ $(document).ready(function(){
 
   $(".button").on('click', function(e){
     var buttonPressed = $(this).text();
+    // Clear display
     if(buttonPressed === 'AC') {
       reset();
       calcValue = '';
+    // Number or decimal point button was clicked
     } else if (!isNaN(buttonPressed) || buttonPressed === '.') {
       calcValue += $(this).text();
       calculation(calcValue);
+    // Calculation operator button was clicked
     } else if (buttonPressed === '÷' || buttonPressed === 'x' || buttonPressed === '+' || buttonPressed === '-') {
       calcValue += $(this).text();
       calculation(calcValue);      
       operator = buttonPressed;      
+    // Equals was clicked, display the total in the display
     } else if (buttonPressed === '=') {
       getTotal(calcValue);
       calcValue += $(this).text();
@@ -40,7 +44,7 @@ function getTotal(total) {
   $("#post-answer").val(eval(total));
 }
 
-
+// Get broswer function and add it to the html form input field
 function getBrowser() {
   let nAgt = navigator.userAgent;
   let browserName  = navigator.appName;

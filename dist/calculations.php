@@ -4,6 +4,8 @@ $read_file = fopen('calculations.csv', 'r');
 $row = 1;
 
 echo "<table border='1'><thead><th>Sum</th><th>IP Address</th><th>Date</th><th>Browser</th>";
+
+// Read and display saved entries
 while (($entry = fgetcsv($read_file)) !== FALSE) {
   $num = count($entry);
   $row++;
@@ -13,6 +15,7 @@ while (($entry = fgetcsv($read_file)) !== FALSE) {
   }  
   echo "</tr>";
 }
+
 echo "</table>";
 
 fclose($read_file);

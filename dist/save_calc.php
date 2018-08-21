@@ -7,13 +7,16 @@ date_default_timezone_set('Europe/London');
 $entry_date = date("jS F Y");
 $browser = $_POST['browser'];
 
+// set entry string
 $entry = "$sum,10.1.1.2,$entry_date,$browser";
-$write_file = fopen("calculations.csv","a");
 
+// Open and Append entry to file
+$write_file = fopen("calculations.csv","a");
 fputcsv($write_file,explode(',',$entry));
 
 fclose($write_file);
 
+// Redirect to home page
 header("Location: index.html");
 die();
 
