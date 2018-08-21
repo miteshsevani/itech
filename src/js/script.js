@@ -32,7 +32,7 @@ function calculation(value) {
 }
 
 function reset() {
-  $("#calculation").text('0');  
+  $("#calculation").text('');  
   $("#answer").text('0');
 }
 
